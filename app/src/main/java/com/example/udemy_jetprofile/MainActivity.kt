@@ -58,6 +58,27 @@ class MainActivity : ComponentActivity() {
                             color = Color.Gray,
                             fontSize = 16.sp
                         )
+                        Spacer(modifier = Modifier.height(20.dp))
+
+                        Column(
+                            horizontalAlignment = Alignment.Start,
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            // 会社名
+                            Text(
+                                text = "しろくま社",
+                                fontSize = 26.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                            Spacer(modifier = Modifier.height(10.dp))
+
+                            //部署
+                            Text(
+                                text = "IT部 しろくま調査チーム",
+                                color = Color.Gray,
+                                fontSize = 16.sp
+                            )
+                        }
                     }
                 }
             }
