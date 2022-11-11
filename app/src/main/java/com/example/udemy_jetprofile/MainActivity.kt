@@ -6,9 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Email
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -77,6 +77,34 @@ class MainActivity : ComponentActivity() {
                                 text = "IT部 しろくま調査チーム",
                                 color = Color.Gray,
                                 fontSize = 16.sp
+                            )
+                            Spacer(modifier = Modifier.height(20.dp))
+
+                            // メールアドレス
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.Email,
+                                    contentDescription = "メールアドレス"
+                                )
+                                Spacer(modifier = Modifier.width(10.dp))
+                                Text(
+                                    text = "Email",
+                                    fontSize = 14.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                            }
+                            Spacer(modifier = Modifier.height(10.dp))
+                            Text(
+                                text = "shiroikumako@email.com",
+                                fontSize = 16.sp
+                            )
+                            Spacer(modifier = Modifier.height(5.dp))
+
+                            Divider(
+                                thickness = 2.dp,
+                                modifier = Modifier.clip(RoundedCornerShape(1000.dp))
                             )
                         }
                     }
